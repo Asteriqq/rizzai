@@ -550,7 +550,7 @@ button.white{
 
 /*Footer*/
 footer{
-    display: flex;
+    display: center;
     flex-wrap: wrap;
     justify-content: space-between;
 }
