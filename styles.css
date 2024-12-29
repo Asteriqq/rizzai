@@ -84,14 +84,14 @@ body{
 
 #navbar li a:hover,
 #navbar li a.active{
-    color: #088178;
+    color: #0040b6;
 
 }
 
 #navbar li a.active::after,
 #navbar li a:hover::after{
     content: "";
-    background: #088178;
+    background: #0056a7;
     width: 30%;
     height: 2px;
     position: absolute;
@@ -550,7 +550,7 @@ button.white{
 
 /*Footer*/
 footer{
-    display: center;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -1337,5 +1337,116 @@ footer .copyright{
         width: 100%;
         padding: 20px;
     }
+
+/* General Styles (for Desktop and larger screens) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Default column layout for larger screens */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section div {
+    width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile-specific Styles using Media Queries */
+@media (max-width: 768px) {
+    /* Adjust navigation for small screens */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Main content layout for mobile */
+    section {
+        flex-direction: column;
+    }
+
+    section div {
+        width: 90%; /* Use full width on mobile */
+        margin: 10px auto;
+    }
+
+    /* Header font and padding adjustment */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    /* Adjust font size and layout for smaller screens */
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens like phones in portrait mode */
+    header {
+        padding: 8px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+    /* Make the section content take full width on very small screens */
+    section div {
+        width: 100%;
+    }
+
+    body {
+        font-size: 12px; /* Smaller text for small screens */
+    }
+}
+
 
 }
